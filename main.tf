@@ -5,6 +5,6 @@ resource "aws_instance" "ec2" {
   security_groups = ["ssh-from-my-mac"]
 
   tags = {
-    Name = "FROM-AWS-GITHUB-RUNNER"
+    Name = "EC@-FROM-AWS-GITHUB-RUNNER"
   }
 }
