@@ -1,0 +1,21 @@
+# This workflow will creat a new EC2 instance using Terraform run on a AWS runner
+
+name: Create EC2 with Terraform on AWS Runner
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+  
+    runs-on: aws-runner 
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run Terraform init
+      run: terraform init
+    - name: terraform apply
+      run: terraform apply -auto-approve
+    - name: save Terraform state file
+      run: cp .terraform.lock.hcl terraform.tfstate terraform.tfstate.backup /tmp/.
