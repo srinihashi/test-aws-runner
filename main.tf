@@ -6,7 +6,17 @@ terraform {
       name = "sg-test"
      }
    }
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.64.0"
+    }
  }
+
+provider "aws" {
+  region = "us-east-1"
+}
+
 #     # An example resource that does nothing.
 #     resource "null_resource" "example" {
 #       triggers = {
