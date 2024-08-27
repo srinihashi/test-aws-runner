@@ -8,12 +8,6 @@ terraform {
    }
  }
 
-#     # An example resource that does nothing.
-#     resource "null_resource" "example" {
-#       triggers = {
-#         value = "A example resource that does nothing!"
-#       }
-#     }
 // Made upate to trigger pipeline
 resource "aws_instance" "ec2" {
   ami = "ami-0fee185d37202108d"
