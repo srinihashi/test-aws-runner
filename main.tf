@@ -1,12 +1,14 @@
-# The configuration for the `remote` backend.
-terraform {
-  backend "remote" {
-    organization = "srini-hashi"
-    workspaces {
-      name = "sg-test"
-     }
-   }
- }
+# The configuration for the `cloud` backend.
+terraform { 
+  cloud { 
+    
+    organization = "srini-hashi" 
+
+    workspaces { 
+      name = "test-1" 
+    } 
+  } 
+}
 
 // Made upate to trigger pipeline
 resource "aws_instance" "ec2" {
