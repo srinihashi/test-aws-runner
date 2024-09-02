@@ -22,6 +22,6 @@ jobs:
     - name: Run Terraform init
       run: terraform init
     - name: Run Terraform plan
-      run: terraform plan
+      run: terraform plan -out=/tmp/terraform/plan.hcl
     #- name: terraform apply
     #  run: terraform apply -auto-approve
