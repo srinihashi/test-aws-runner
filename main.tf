@@ -1,3 +1,4 @@
+/***
 # The configuration for the `cloud` backend.
 terraform { 
   cloud { 
@@ -9,6 +10,7 @@ terraform {
     } 
   } 
 }
+****/
 
 // Made upate to trigger pipeline
 resource "aws_instance" "ec2" {
