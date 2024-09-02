@@ -9,7 +9,7 @@ on:
 jobs:
   build:
   
-    runs-on: aws-runner-3
+    runs-on: [self-hosted, AmazonLinux]
 
     steps:
     - uses: actions/checkout@v4
