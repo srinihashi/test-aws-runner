@@ -18,6 +18,6 @@ resource "aws_instance" "ec2" {
   security_groups = ["ssh-from-my-mac"]
 
   tags = {
-    Name = "EC2-RUNNER-TFC-TEST-1"
+    Name = "EC2-RUNNER-TFC-TEST-2"
   }
 }
